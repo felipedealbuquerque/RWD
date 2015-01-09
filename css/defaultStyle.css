@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* simple Reset */
+*{
+	padding:0;
+	margin:0;
+	text-decoration:none; 
+	list-style:none;
+}
+
+/* simple all animation */
+*{transition:all 0.3s linear;}
+
+body{
+	background:#eee;
+}
+	#container{
+		width:90%;
+		background:#fff;
+		margin: 0 auto;
+	}
+	
+	img {max-width: 100%;}
+	
+	header{
+		background:#000;
+		position:relative;
+	}
+	
+ 	header img {
+   		display: block;
+   		max-width:auto;
+	}
+
+	header h1{
+		color:#FFF;
+		position:absolute;
+		right:10%;
+		top:50px;
+	}
+	
+	nav{background:#999; clear:both}
+		nav h2{display:none;}
+		nav li{display:inline-block;}
+			nav li a{
+				display:block;
+				padding:20px;
+				color:black;
+			}
+			nav li a:hover{
+				background:#000;
+				color:white;
+			}
+	
+		section{
+			padding:20px;
+		}
+			section header{
+				background:transparent;
+			}
+		
+footer{display:none}
+#msgSemSuporte{display:none;}
+
+/* Media Query */
+
+/* Exemplo de primeira quebra de layout */
+@media (max-width:912px) {
+	  header h1{
+		color:#FFF;
+		position:absolute;
+		left:10%;
+		top:80%;
+	  }
+}
+
+/* Exemplo de segunda quebra de layout */
+@media (max-width:500px) {
+	  header h1{
+		font-size:24px;
+		left:5%;
+	  }
+}
+/* Exemplo de terceira quebra de layout */
+@media (max-width:337px) {
+	  header h1{
+		font-size:20px;
+		left:3%;
+	  }
+	  nav li a{padding:15px;}
+}
+/* Exemplo com a resolução do Android */
+@media screen and (max-device-width: 480px){
+	#container{width:100%}
+	img.logo {max-width: 85%;margin:0 auto;}
+	nav li{
+		display:block; 
+		border-bottom:1px solid #333
+		}
+	header h1{
+		font-size:20px;
+		left:5%;
+		top:75%;
+	}
+	nav li a{
+		padding:15px;
+	}
+
+}
+
+/* Exemplo com a resolução do iPhone */
+@media only screen and (max-width : 320px) {
+	#container{width:100%}
+	img.logo {max-width: 85%;margin:0 auto;}
+	
+	nav li{
+		display:block; 
+		border-bottom:1px solid #333
+		}
+	header h1{
+		font-size:20px;
+		left:5%;
+		top:75%;
+	}
+	nav li a{
+		padding:10px;
+	}
+}
+
+
+/* Último suporte de quebra de layout */
+@media (max-width:275px) {
+	  header h1{
+		font-size:18px;
+		left:3%;
+	  }
+	  nav li a{padding:8px;}
+}
+
+/* sorry :) */
+@media (max-width:242px) {
+	  #container{display:none;}
+	  body{background:url(../images/sorry.jpg) top center;}
+	  #msgSemSuporte{
+		  display:block;
+		  color:white;
+		  font-size:24px;
+		  padding:4%;
+	}
+}
